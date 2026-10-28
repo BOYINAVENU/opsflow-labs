@@ -14,7 +14,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const e = $input.first().json; const execution = e.execution || {}; const workflow = e.workflow || {}; return [{json:{source:'opsflow-error-alert',workflowName:workflow.name || 'Unknown workflow',executionId:execution.id || null,errorMessage:execution.error?.message || e.trigger?.error?.message || 'Unknown error',executionUrl:execution.url || null,occurredAt:new Date().toISOString()}}];"
+        "jsCode": "const e = $input.first().json || {};\nconst workflow = e.workflow || {};\nconst execution = e.execution || {};\n// Privacy-first: do not include raw exception messages, payloads, URLs, or stack traces.\nconst safeName = String(workflow.name || 'Unknown workflow').replace(/[\\r\\n\\t]/g, ' ').slice(0, 100);\nconst safeId = /^[a-zA-Z0-9_-]{1,64}$/.test(String(execution.id || '')) ? String(execution.id) : null;\nreturn [{ json: { source: 'opsflow-error-alert', workflowName: safeName, executionId: safeId, status: 'WORKFLOW_ERROR', occurredAt: new Date().toISOString(), note: 'Review execution details in your secured n8n instance.' } }];"
       },
       "id": "b8c321b2-1c5f-4c00-9d7c-80e9c91d0202",
       "name": "Format Error",
