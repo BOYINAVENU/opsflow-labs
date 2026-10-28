@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://boyinavenu.github.io/opsflow-labs/sitemap.xml
