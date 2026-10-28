@@ -1,0 +1,52 @@
+{
+  "name": "OpsFlow - Agency Lead Intake Demo",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "opsflow-lead-intake-demo",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "39aa8b7a-820e-4df7-929f-4c40a6c13421",
+      "name": "Lead Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        240,
+        300
+      ],
+      "webhookId": "opsflow-lead-intake-demo"
+    },
+    {
+      "parameters": {
+        "jsCode": "const data = $input.first().json.body ?? {};\nconst clean = x => typeof x === 'string' ? x.trim() : '';\nconst email = clean(data.email).toLowerCase();\nconst name = clean(data.name).slice(0,120);\nconst company = clean(data.company).slice(0,120);\nconst message = clean(data.message).slice(0,3000);\nconst consent = data.consent === true;\nconst valid = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email) && !!name && consent;\nconst key = email + '|' + company.toLowerCase();\nreturn [{json:{valid,reviewStatus:valid?'PENDING_HUMAN_REVIEW':'REJECTED',name,company,email,message,consent,dedupeKey:key,receivedAt:new Date().toISOString(),errors:[...(!name?['name_required']:[]),...(!email||!(/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email))?['invalid_email']:[]),...(!consent?['consent_required']:[])]}}];"
+      },
+      "id": "68cc15d9-58d4-4e83-83f5-74c83fd09c1d",
+      "name": "Validate and Normalize",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        500,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Lead Webhook": {
+      "main": [
+        [
+          {
+            "node": "Validate and Normalize",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false
+}
