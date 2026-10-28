@@ -1,0 +1,31 @@
+day,channel,topic,format,cta,status
+1,LinkedIn,Five n8n webhook checks,Text post,Free demo,DRAFT
+2,X,Why dedupe keys are not enough,Text post,Free demo,DRAFT
+3,YouTube Shorts,Lead validation walkthrough,Screen recording,Free demo,DRAFT
+4,GitHub,Webhook setup tutorial,README,Free demo,DRAFT
+5,LinkedIn,Manual approval before outbound automation,Text post,Early access,DRAFT
+6,X,Retry safety and idempotency,Text post,Free demo,DRAFT
+7,Website,Lead intake security checklist,Article,Early access,DRAFT
+8,LinkedIn,How to test consent inputs,Text post,Free demo,DRAFT
+9,YouTube Shorts,Three lead intake mistakes,Screen recording,Free demo,DRAFT
+10,X,Why webhook responses mislead,Text post,Free demo,DRAFT
+11,LinkedIn,Error logs and secrets,Text post,Free demo,DRAFT
+12,GitHub,Error alert starter documentation,README,Free demo,DRAFT
+13,X,Human review versus auto send,Text post,Early access,DRAFT
+14,Website,Error alert setup tutorial,Article,Early access,DRAFT
+15,LinkedIn,Automation reliability checklist,Text post,Free demo,DRAFT
+16,X,Why rate limiting matters,Text post,Free demo,DRAFT
+17,YouTube Shorts,Malformed payload test,Screen recording,Free demo,DRAFT
+18,LinkedIn,What production ready really means,Text post,Early access,DRAFT
+19,X,Five minute workflow audit,Text post,Free demo,DRAFT
+20,GitHub,Add example test payloads,README,Free demo,DRAFT
+21,Website,Idempotency guide,Article,Early access,DRAFT
+22,LinkedIn,Workflow failure taxonomy,Text post,Free demo,DRAFT
+23,X,Redacting error logs,Text post,Free demo,DRAFT
+24,YouTube Shorts,How to import workflow JSON,Screen recording,Free demo,DRAFT
+25,LinkedIn,Consent and data retention,Text post,Free demo,DRAFT
+26,X,Alert fatigue prevention,Text post,Free demo,DRAFT
+27,GitHub,Release gate documentation,README,Early access,DRAFT
+28,Website,Lead validation tutorial,Article,Free demo,DRAFT
+29,LinkedIn,Lessons from building OpsFlow Labs,Text post,Early access,DRAFT
+30,X,Monthly build recap,Text post,Early access,DRAFT
