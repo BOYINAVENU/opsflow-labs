@@ -1,0 +1,13 @@
+const assert=require("node:assert/strict");
+const {test}=require("node:test");
+const {validateLead}=require("./lead-validation.cjs");
+const valid={name:" A ",email:"  A@Example.COM ",company:" Studio ",message:"Hello",consent:true};
+test("accepts valid consented lead",()=>assert.equal(validateLead(valid).valid,true));
+test("normalizes email",()=>assert.equal(validateLead(valid).email,"a@example.com"));
+test("requires consent",()=>assert.equal(validateLead({...valid,consent:false}).valid,false));
+test("rejects invalid email",()=>assert.equal(validateLead({...valid,email:"invalid"}).valid,false));
+test("requires name",()=>assert.equal(validateLead({...valid,name:" "}).valid,false));
+test("handles null payload",()=>assert.equal(validateLead(null).valid,false));
+test("caps message length",()=>assert.equal(validateLead({...valid,message:"x".repeat(5000)}).message.length,3000));
+test("produces deterministic key",()=>assert.equal(validateLead(valid).dedupeKey,validateLead(valid).dedupeKey));
+test("rejects consent string",()=>assert.equal(validateLead({...valid,consent:"true"}).valid,false));
