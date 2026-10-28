@@ -1,0 +1,46 @@
+{
+  "name": "OpsFlow Labs - Error Alert Starter",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "a9b221a1-0b4e-4c99-81c8-75e8b80c0101",
+      "name": "Error Trigger",
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [
+        240,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const e = $input.first().json; const execution = e.execution || {}; const workflow = e.workflow || {}; return [{json:{source:'opsflow-error-alert',workflowName:workflow.name || 'Unknown workflow',executionId:execution.id || null,errorMessage:execution.error?.message || e.trigger?.error?.message || 'Unknown error',executionUrl:execution.url || null,occurredAt:new Date().toISOString()}}];"
+      },
+      "id": "b8c321b2-1c5f-4c00-9d7c-80e9c91d0202",
+      "name": "Format Error",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Error Trigger": {
+      "main": [
+        [
+          {
+            "node": "Format Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false
+}
