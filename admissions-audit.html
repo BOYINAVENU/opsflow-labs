@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#091421"><meta name="description" content="Free, private, six-question admissions follow-up workflow audit for coaching and training centres. Get a practical action plan in your browser.">
+<title>Free Admissions Follow-Up Audit | OpsFlow Labs</title><style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif;color:#ecf6fb;background:#091421}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 70% 0,#153b45 0,transparent 38%),#091421}
+a{color:#8aeacf;text-decoration:none}a:hover{text-decoration:underline}
+.shell{max-width:960px;margin:auto;padding:0 23px}.nav{border-bottom:1px solid #2b4656;display:flex;align-items:center;justify-content:space-between;padding:23px 0;gap:12px}
+.brand{font-size:20px;font-weight:850;color:#f6fbff;letter-spacing:-.05em}.brand span{color:#8ee9cc}
+.toplinks{font-size:14px}header{padding:64px 0 42px}.eyebrow{font-size:12px;text-transform:uppercase;font-weight:900;letter-spacing:.17em;color:#99e9d3}
+h1{font-size:clamp(38px,6vw,66px);letter-spacing:-.065em;line-height:1.07;margin:20px 0}h1 span{color:#8cebd0}
+.lead{color:#bfd0dd;font-size:18px;line-height:1.68;max-width:690px}.notice{font-size:13px;color:#9fb7c6}
+.progress{margin:30px 0 20px;height:8px;background:#23384b;border-radius:100px;overflow:hidden}.progress div{height:100%;width:0;background:#90ead1;transition:width .2s}
+fieldset{min-width:0;border:1px solid #315163;background:#111f2e;padding:22px 25px;margin:0 0 16px;border-radius:16px}legend{font-weight:750;padding:0 7px;font-size:18px}
+.questionhint{font-size:14px;color:#b3c9d5;margin:0 0 13px;line-height:1.5}.options{display:flex;gap:12px;flex-wrap:wrap}
+.options label{background:#192d3d;border:1px solid #41596b;border-radius:11px;padding:12px 16px;display:flex;align-items:center;gap:10px;font-size:14px;cursor:pointer}
+.options label:has(input:checked){border-color:#8fe7cf;background:#204a48;color:#fff}input{accent-color:#8fe7cf}
+button,.button{border:0;background:#90e9ce;color:#082a22;font-weight:800;border-radius:11px;padding:15px 21px;cursor:pointer;font-size:15px;display:inline-block}
+button:hover,.button:hover{filter:brightness(1.08);text-decoration:none}.secondary{background:transparent;color:#e8f7f1;border:1px solid #667b87}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+#result{display:none;background:#132d35;border:1px solid #528377;border-radius:20px;padding:30px;margin:35px 0;scroll-margin-top:30px}
+#result h2{margin:0;font-size:30px}.score{font-size:53px;font-weight:900;letter-spacing:-.055em;margin:13px 0}.resultnote{font-size:13px;color:#b6cbd5}
+ol{padding-left:23px}ol li{margin:13px 0;color:#d8e7f0;line-height:1.55}
+.section{border-top:1px solid #34585e;margin-top:25px;padding-top:20px}
+footer{margin:65px 0 30px;padding-top:25px;border-top:1px solid #304656;color:#8da7b7;font-size:13px}
+@media(max-width:600px){header{padding-top:45px}fieldset{padding:19px 15px}.options{gap:8px}.options label{padding:10px}.score{font-size:44px}}
+</style></head><body><div class="shell"><nav class="nav"><a class="brand" href="./">◈ OpsFlow <span>Labs</span></a><div class="toplinks"><a href="./admissionrelay.html">AdmissionRelay Toolkit</a></div></nav>
+<header><div class="eyebrow">Free interactive workflow audit · 3 minutes</div><h1>How many enquiries are <span>missing a next step?</span></h1>
+<p class="lead">Answer six operational questions to get a practical, private checklist for your admissions desk. No signup, student records or software installation required.</p>
+<p class="notice">This checklist evaluates process completeness, not your actual conversion rate. Your answers stay in this browser and are not transmitted to us.</p>
+<div class="progress" aria-hidden="true"><div id="bar"></div></div><p class="notice" id="progress-text">0 of 6 answered</p></header>
+<main><form id="audit">
+<fieldset><legend>1. Do all enquiries reach one shared tracker?</legend><p class="questionhint">Consider phone calls, walk-ins, WhatsApp, web forms and ads.</p><div class="options"><label><input type="radio" name="q1" value="1"> Yes, consistently</label><label><input type="radio" name="q1" value="0"> Not consistently</label></div></fieldset>
+<fieldset><legend>2. Is every active enquiry assigned a named staff owner?</legend><p class="questionhint">Someone should be clearly accountable for the next action.</p><div class="options"><label><input type="radio" name="q2" value="1"> Yes</label><label><input type="radio" name="q2" value="0"> No</label></div></fieldset>
+<fieldset><legend>3. Is the next action and due date recorded?</legend><p class="questionhint">A record like “interested” is not enough without a next step.</p><div class="options"><label><input type="radio" name="q3" value="1"> Yes</label><label><input type="radio" name="q3" value="0"> No</label></div></fieldset>
+<fieldset><legend>4. Does someone review overdue follow-ups daily?</legend><p class="questionhint">A simple daily review is enough; no automation is required.</p><div class="options"><label><input type="radio" name="q4" value="1"> Yes</label><label><input type="radio" name="q4" value="0"> No</label></div></fieldset>
+<fieldset><legend>5. Are first replies and demo confirmations consistent?</legend><p class="questionhint">Staff can personalize templates rather than start from zero.</p><div class="options"><label><input type="radio" name="q5" value="1"> Yes</label><label><input type="radio" name="q5" value="0"> No</label></div></fieldset>
+<fieldset><legend>6. Do you log opt-outs and stop unwanted follow-ups?</legend><p class="questionhint">People who say no or request no more contact should not receive additional pitches.</p><div class="options"><label><input type="radio" name="q6" value="1"> Yes</label><label><input type="radio" name="q6" value="0"> No</label></div></fieldset>
+<div class="actions"><button type="submit">See my workflow checklist →</button><button class="secondary" type="reset">Reset answers</button></div>
+<p class="notice" id="error" role="status" aria-live="polite"></p></form>
+<section id="result" aria-live="polite" tabindex="-1"><div class="eyebrow">Your process completeness snapshot</div><div class="score" id="score"></div><h2 id="verdict"></h2><p class="resultnote">Simple self-reported checklist only; it is not an estimate of revenue, sales or admissions improvement.</p>
+<div class="section"><h3>Start with these actions</h3><ol id="actions"></ol></div>
+<div class="section"><h3>Want reusable templates and an offline dashboard?</h3><p class="lead">AdmissionRelay includes 18 editable communication templates, 16 AI prompts and a downloadable CSV workflow dashboard. It is a manual toolkit, not a connected CRM or automatic sender.</p>
+<div class="actions"><a class="button" href="https://venuboyina.gumroad.com/l/admissionrelay-v1" rel="noopener noreferrer" target="_blank">Explore AdmissionRelay on Gumroad ↗</a><a class="button secondary" href="./admissionrelay.html">Read product details</a></div>
+<p class="notice">Review final price, payment availability, refund terms and included files on Gumroad before purchasing.</p></div></section>
+</main><footer>© OpsFlow Labs · Free self-assessment · No answers saved or transmitted · <a href="mailto:venu.boyina31+admissionrelay@gmail.com?subject=Admissions%20workflow%20question">Contact OpsFlow Labs</a></footer>
+</div><script>
+(function(){
+const prompts=[
+"Create a single spreadsheet or CSV intake queue for phone, WhatsApp, web, advertising and walk-in leads.",
+"Assign one named staff owner to each active enquiry, and define how unassigned records are reviewed.",
+"Add a clear next action and a due date for each active enquiry; avoid vague statuses alone.",
+"Hold a short daily review of due and overdue follow-ups; close the loop with a recorded outcome.",
+"Create approved draft replies for common questions, demo booking and fee clarifications, then personalize them.",
+"Record consent or opt-out status where relevant, and honor no-contact requests promptly."
+];
+const form=document.getElementById("audit");const bar=document.getElementById("bar");const progress=document.getElementById("progress-text");const result=document.getElementById("result");const error=document.getElementById("error");
+function read(){return Array.from({length:6},(_,i)=>{const e=form.querySelector('input[name="q'+(i+1)+'"]:checked');return e?Number(e.value):null;});}
+function tick(){const n=read().filter(v=>v!==null).length;progress.textContent=n+" of 6 answered";bar.style.width=(n/6*100)+"%";error.textContent="";}
+form.addEventListener("change",tick);
+form.addEventListener("reset",function(){result.style.display="none";setTimeout(tick,0);});
+form.addEventListener("submit",function(e){
+e.preventDefault();const v=read();if(v.some(x=>x===null)){error.textContent="Please answer all six questions to see your checklist.";return;}
+const yes=v.reduce((a,b)=>a+b,0);const score=Math.round(yes/6*100);
+document.getElementById("score").textContent=yes+" / 6 checks in place";
+document.getElementById("verdict").textContent=yes<=2?"Build your follow-up foundation":yes<=4?"Close the process gaps":"Strengthen consistency and evidence";
+const items=prompts.filter((p,i)=>v[i]===0);
+if(items.length===0)items.push("Audit five recent enquiries to verify that owners, due dates and outcomes were actually recorded.","Review how staff manage exceptions, no-shows and permission changes each week.");
+const ol=document.getElementById("actions");ol.textContent="";items.forEach(t=>{const li=document.createElement("li");li.textContent=t;ol.appendChild(li);});
+result.style.display="block";result.focus();result.scrollIntoView({behavior:"smooth",block:"start"});
+});
+tick();
+})();
+</script></body></html>
