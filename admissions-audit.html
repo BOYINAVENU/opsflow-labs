@@ -40,11 +40,11 @@ footer{margin:65px 0 30px;padding-top:25px;border-top:1px solid #304656;color:#8
 <p class="notice" id="error" role="status" aria-live="polite"></p></form>
 <section id="result" aria-live="polite" tabindex="-1"><div class="eyebrow">Your process completeness snapshot</div><div class="score" id="score"></div><h2 id="verdict"></h2><p class="resultnote">Simple self-reported checklist only; it is not an estimate of revenue, sales or admissions improvement.</p>
 <div class="section"><h3>Start with these actions</h3><ol id="actions"></ol></div>
-<div class="section"><h3>Tell us what your admissions desk actually struggles with</h3><p class="lead">We are collecting real feedback from coaching and training teams. If this checklist highlighted a problem we have not solved, you can share just your checklist summary and describe the biggest issue. There is no automatic submission.</p><div class="actions"><a id="feedback-email" class="button secondary" href="mailto:venu.boyina31+admissionrelay@gmail.com?subject=Admissions%20workflow%20feedback">Share feedback by email ↗</a></div><p class="notice">Optional: clicking opens an email draft. Check and edit it before sending. Do not include student contact details or private records.</p></div>
+<div class="section"><h3>Tell us what your admissions desk actually struggles with</h3><p class="lead">We are collecting real feedback from coaching and training teams. If this checklist highlighted a problem we have not solved, you can share just your checklist summary and describe the biggest issue. There is no automatic submission.</p><div class="actions"><a id="feedback-email" class="button secondary" href="mailto:opsflowlabs@gmail.com?subject=Admissions%20workflow%20feedback">Share feedback by email ↗</a></div><p class="notice">Optional: clicking opens an email draft. Check and edit it before sending. Do not include student contact details or private records.</p></div>
 <div class="section"><h3>Want reusable templates and an offline dashboard?</h3><p class="lead">AdmissionRelay includes 18 editable communication templates, 16 AI prompts and a downloadable CSV workflow dashboard. It is a manual toolkit, not a connected CRM or automatic sender.</p>
 <div class="actions"><a class="button" href="https://venuboyina.gumroad.com/l/admissionrelay-v1" rel="noopener noreferrer" target="_blank">Get the full AdmissionRelay toolkit · $29 ↗</a><a class="button secondary" href="./admissionrelay.html">Read product details</a><a class="button secondary" href="./admissions-follow-up-checklist.html">Free follow-up checklist + CSV ↓</a></div>
 <p class="notice">Review final price, payment availability, refund terms and included files on Gumroad before purchasing.</p></div></section>
-</main><footer>© OpsFlow Labs · Free self-assessment · No answers saved or transmitted automatically · <a href="mailto:venu.boyina31+admissionrelay@gmail.com?subject=Admissions%20workflow%20question">Contact OpsFlow Labs</a></footer>
+</main><footer>© OpsFlow Labs · Free self-assessment · No answers saved or transmitted automatically · <a href="mailto:opsflowlabs@gmail.com?subject=Admissions%20workflow%20question">Contact OpsFlow Labs</a></footer>
 </div><script>
 (function(){
 const prompts=[
@@ -71,7 +71,7 @@ const ol=document.getElementById("actions");ol.textContent="";items.forEach(t=>{
 const issueLabels=["Shared tracker","Named enquiry owner","Next action and due date","Daily overdue review","Consistent first replies","Opt-out handling"];
 const summary=issueLabels.filter((_,i)=>v[i]===0);
 const emailBody="Hello OpsFlow Labs,\n\nI completed the free admissions workflow checklist.\nChecks in place: "+yes+" of 6.\nAreas I marked as needing attention: "+(summary.length?summary.join(", "):"None marked")+".\n\nOur biggest challenge is: [please describe without sharing student details]\n\nWe currently manage enquiries using: [spreadsheet / CRM / other]\n\nRegards,";
-const feedback=document.getElementById("feedback-email");feedback.href="mailto:venu.boyina31+admissionrelay@gmail.com?subject="+encodeURIComponent("Admissions workflow feedback")+"&body="+encodeURIComponent(emailBody);
+const feedback=document.getElementById("feedback-email");feedback.href="mailto:opsflowlabs@gmail.com?subject="+encodeURIComponent("Admissions workflow feedback")+"&body="+encodeURIComponent(emailBody);
 result.style.display="block";result.focus();result.scrollIntoView({behavior:"smooth",block:"start"});
 });
 tick();
